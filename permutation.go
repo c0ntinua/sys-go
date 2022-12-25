@@ -49,3 +49,13 @@ func asString(p Permutation) string {
 	}
 	return strings.Join(s, "")
 }
+func inverse(f Permutation) Permutation {
+	g := make(Permutation, len(f))
+	j := 0
+	for i := range f {
+		for j = 0; j != f[i]; j++ {
+		}
+		g[j] = i
+	}
+	return g
+}
